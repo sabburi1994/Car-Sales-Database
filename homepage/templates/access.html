@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link rel="stylesheet" href="../static/css/style4.css" type="text/css">
+
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %}">Home </a></li>
+    <li><a href="{% url 'store' %}">Store </a></li>
+    <li><a href="{% url 'access' %}">Access </a></li>
+    <li><a href="{% url 'about' %}">About </a></li>
+  <ul>
+</nav>
+<head>
+  Enter the billing number to get sales details</br></br>
+</head>
+<body>
+
+  <div>
+    <form action="{% url 'car_details' %}" method="get">
+      {% csrf_token %}
+      <input type="number" name="car_billing_number">billing number</input></br>
+      <input type="submit" value="Get Details">
+    </form>
+
+  </div>
+</body>
+</html>

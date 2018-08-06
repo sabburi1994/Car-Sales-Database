@@ -1,0 +1,28 @@
+<html>
+<div>
+  {% load static %}
+  <link rel="stylesheet" href="../static/css/style4.css" type="text/css">
+
+<nav>
+
+  <ul>
+    <li><a href="{% url 'home' %}">Home </a></li>
+    <li><a href="{% url 'store' %}">Store </a></li>
+    <li><a href="{% url 'access' %}">Access </a></li>
+    <li><a href="{% url 'about' %}">About </a></li>
+  <ul>
+</nav>
+</div>
+<head>
+  Add details of billing data</br>
+  Note: The date field is in (mm/dd/yyyy) format</br></br>
+
+</head>
+<body>
+  <form action="{% url 'store' %}" method="post">
+    {% csrf_token %}
+    {{ car_form.as_p }}
+    <input type="submit" value="Save Details">
+</form>
+</body>
+</html>

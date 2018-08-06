@@ -1,0 +1,49 @@
+<!DOCTYPE html
+<html>
+
+{% load static %}
+<link rel="stylesheet" href="../static/css/style4.css" type="text/css">
+<head>
+  <html>
+  <head>
+  <title>Simple App</title>
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home </a></li>
+      <li><a href="{% url 'store' %}">Store </a></li>
+      <li><a href="{% url 'access' %}">Access </a></li>
+      <li><a href="{% url 'about' %}">About </a></li>
+    <ul>
+  </nav>
+</head>
+
+<body>
+  This web application has been created as a part of my interest to learn django.</br>
+  The main idea is to build a automobile sales database </br>
+  </br>
+  Using this Django Web Application, you can store and access data of car sales</br></br>
+  The usage of this web application can be seen in the video.
+<video width="720" height="576" autoplay>
+  <source src="../static/videos/usage.mp4" type="video/mp4">
+</video>
+
+</body>
+
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+</style>
+
+<div class="footer">
+Created by: Abburi,  Contact:<a href="mailto:asainikhil6118@gmail.com">
+  asainikhil6118@gmail.com</a>
+</div>
+
+</html>

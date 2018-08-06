@@ -1,0 +1,30 @@
+<html>
+{% load static %}
+<link rel="stylesheet" href="../static/css/style4.css" type="text/css">
+
+<nav>
+
+<ul>
+  <li><a href="{% url 'home' %}">Home </a></li>
+  <li><a href="{% url 'store' %}">Store </a></li>
+  <li><a href="{% url 'access' %}">Access </a></li>
+  <li><a href="{% url 'about' %}">About </a></li>
+<ul>
+</nav>
+<head>
+Displaying data from database</br></br>
+</head>
+<body>
+  <table style="border: 1px solid black">
+      <tr><td>Billing number</td><td>{{ car.billing_number }}</td></tr>
+      <tr><td>Customer</td><td>{{ car.customer }}</td></tr>
+      <tr><td>Price</td><td>{{ car.price }} €</td></tr>
+      <tr><td>Purchase Date</td><td>{{ car.purchase_date }}</td></tr>
+      <tr><td>Company</td><td>{{ car.company }}</td></tr>
+      <tr><td>Model</td><td>{{ car.model }}</td></tr>
+      <tr><td>Serial Number</td><td>{{ car.serial_number }}</td></tr>
+      <tr><td>Mfg Date</td><td>{{ car.mfg_date }}</td></tr>
+      <tr><td>Shipping Date</td><td>{{ car.shipping_date }}</td></tr>
+  </table>
+</body>
+</html>
